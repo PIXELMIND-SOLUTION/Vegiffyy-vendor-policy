@@ -10,9 +10,9 @@ const PrivacyAndPolicy = () => {
                 <ul className="ps-3">
                     <li>First Name and Last Name</li>
                     <li>Mobile Number and Email Address</li>
-                    <li>Profile Information (updated name, email, profile picture)</li>
+                    <li>Profile Information (updated first name, Last name, email, profile picture)</li>
                     <li>Delivery Address and Location Information</li>
-                    <li>Order History and Preferences</li>
+                    <li>Order History.</li>
                     <li>Payment Method Details (via secure gateways)</li>
                 </ul>
             ),
@@ -66,7 +66,7 @@ const PrivacyAndPolicy = () => {
                         <li>Update first name, last name, email, and profile picture</li>
                         <li>Modify saved addresses</li>
                         <li>Access order history</li>
-                        <li>Request account deletion</li>
+                        <li>You can delete your Account any time.</li>
                     </ul>
                     <p>
                         Email us at:{" "}
@@ -83,7 +83,7 @@ const PrivacyAndPolicy = () => {
             content: (
                 <p>
                     Data is retained only for service operations, customer support, and legal compliance.
-                    You can request deletion any time.
+                    You can delete your account any time.
                 </p>
             ),
         },
@@ -92,8 +92,8 @@ const PrivacyAndPolicy = () => {
             title: "7. Children's Privacy",
             content: (
                 <p>
-                    Vegiffyy is intended for users aged 16+. We do not knowingly collect data from
-                    children below 16 without parental consent.
+                    Vegiffyy is intended for users aged 18+. We do not knowingly collect data from
+                    children below 18 without parental consent.
                 </p>
             ),
         },
@@ -133,6 +133,12 @@ const PrivacyAndPolicy = () => {
         },
     ];
 
+    const today = new Date().toLocaleDateString("en-IN", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+    });
+
     return (
         <div className="pb-5" style={{ backgroundColor: "#F7FFF8" }}>
             {/* HEADER */}
@@ -148,6 +154,9 @@ const PrivacyAndPolicy = () => {
                 <h1 className="fw-bold">Vegiffyy - Privacy Policy</h1>
                 <p className="mt-2" style={{ opacity: 0.9 }}>
                     Your trust is our priority. We keep your data safe & secure.
+                </p>
+                <p className="mt-3 fw-semibold" style={{ fontSize: "15px", opacity: 0.9 }}>
+                    📅 Last Updated: {today}
                 </p>
             </div>
 
